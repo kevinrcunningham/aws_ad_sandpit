@@ -22,9 +22,9 @@ Any further instances created to interact with this environment will need to poi
 AD properties are contained in the userdata.txt file which is a short powershell script to create an admin user, install AD DS, and promote the server as a DC. These are static entries within the file, which cannot contain variables.  To alter the user name, password, or domain name, edit the appropriate lines of text.
 
 Default values contained in the file are:
-    Domain FQDN:    ADSandpit.net
-    Admin User:     ADSandpitAdmin
-    Password:       Password1
+  *  Domain FQDN:    ADSandpit.net
+  *  Admin User:     ADSandpitAdmin
+  *  Password:       Password1
 
 This user is created as a member of the local administrators group prior to promotion, and is therefore a member of ADSandpit\Administrators upon promotion.  For additional access (Domain Admins, etc) this must be configured after creation.
 
