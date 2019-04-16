@@ -1,0 +1,8 @@
+<powershell>
+Net User ADSandpitAdmin Password1 /ADD
+Net Localgroup administrators ADSandpitAdmin /ADD 
+$Secure_String_Pwd = ConvertTo-SecureString "Password1" -AsPlainText -Force
+Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
+Install-ADDSForest -DomainName ADSandpit.net -InstallDNS -SafeModeAdministratorPassword $Secure_String_Pwd -Force
+
+</powershell>
