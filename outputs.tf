@@ -1,4 +1,4 @@
-output "DC__Public_IP" {
+output "DC_Public_IP" {
     value = "${aws_instance.DC1.public_ip}"
 }
 
