@@ -15,7 +15,7 @@ resource "aws_instance" "DC1" {
 
   }
   
-    user_data = "${file("userdata.txt")}"
+    user_data = "${file("./userdata.txt")}"
     vpc_security_group_ids = ["${aws_security_group.SG_ADSandpit.id}"]
 }
 
